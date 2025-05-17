@@ -60,3 +60,16 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+### OS ###
+Thumbs.db
+.DS_Store
+
+### Environment ###
+.env
+.env.local
+.env.*.local
+.gradle/
+build/
+out/
+!gradle/wrapper/gradle-wrapper.jar
