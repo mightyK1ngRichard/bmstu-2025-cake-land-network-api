@@ -110,6 +110,7 @@ public extension NotificationServiceImpl {
             do {
                 var options = networkService.callOptions
                 options.timeLimit = .none
+                networkService.addAuthorizationHeaderIfNeeded()
                 let stream = client.streamNotifications(.init(), callOptions: options)
                 for try await response in stream {
                     notificationPublisher.send(NotificationEntity(from: response.notification))

@@ -17,6 +17,18 @@ public struct CategoryEntity: Sendable, Hashable {
     public let imageURL: String
     /// Теги категории (по полу)
     public let genderTags: [CategoryGender]
+
+    public init(
+        id: String,
+        name: String,
+        imageURL: String,
+        genderTags: [CategoryGender]
+    ) {
+        self.id = id
+        self.name = name
+        self.imageURL = imageURL
+        self.genderTags = genderTags
+    }
 }
 
 /// Пол категории

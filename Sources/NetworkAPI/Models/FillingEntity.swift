@@ -20,6 +20,22 @@ public struct FillingEntity: Sendable, Hashable {
     public let kgPrice: Double
     /// Описание начинки
     public let description: String
+
+    public init(
+        id: String,
+        name: String,
+        imageURL: String,
+        content: String,
+        kgPrice: Double,
+        description: String
+    ) {
+        self.id = id
+        self.name = name
+        self.imageURL = imageURL
+        self.content = content
+        self.kgPrice = kgPrice
+        self.description = description
+    }
 }
 
 // MARK: - Cake_Filling

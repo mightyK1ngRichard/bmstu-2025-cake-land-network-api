@@ -45,6 +45,46 @@ public struct CakeEntity: Sendable, Hashable {
     public var colorsHex: [String]
     /// Ссылка на 3Д модель
     public let model3DURL: String?
+
+    public init(
+        id: String,
+        name: String,
+        imageURL: String,
+        kgPrice: Double,
+        rating: Int,
+        reviewsCount: Int,
+        description: String,
+        mass: Double,
+        status: CakeStatusEntity,
+        dateCreation: Date,
+        discountKgPrice: Double?,
+        discountEndTime: Date?,
+        owner: UserEntity,
+        fillings: [FillingEntity],
+        categories: [CategoryEntity],
+        images: [CakeImageEntity],
+        colorsHex: [String],
+        model3DURL: String?
+    ) {
+        self.id = id
+        self.name = name
+        self.imageURL = imageURL
+        self.kgPrice = kgPrice
+        self.rating = rating
+        self.reviewsCount = reviewsCount
+        self.description = description
+        self.mass = mass
+        self.status = status
+        self.dateCreation = dateCreation
+        self.discountKgPrice = discountKgPrice
+        self.discountEndTime = discountEndTime
+        self.owner = owner
+        self.fillings = fillings
+        self.categories = categories
+        self.images = images
+        self.colorsHex = colorsHex
+        self.model3DURL = model3DURL
+    }
 }
 
 /// Статусы торта
@@ -68,6 +108,11 @@ public extension CakeEntity {
         public let id: String
         /// Ссылка на изображение
         public let imageURL: String
+
+        public init(id: String, imageURL: String) {
+            self.id = id
+            self.imageURL = imageURL
+        }
     }
 }
 

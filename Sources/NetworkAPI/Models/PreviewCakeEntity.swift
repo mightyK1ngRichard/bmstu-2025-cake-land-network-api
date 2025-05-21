@@ -42,6 +42,44 @@ public struct PreviewCakeEntity: Sendable, Hashable {
     public let dateCreation: Date
     /// Ссылка на 3Д модель
     public let model3DURL: String?
+
+    public init(
+        id: String,
+        name: String,
+        imageURL: String,
+        kgPrice: Double,
+        rating: Int,
+        reviewsCount: Int,
+        description: String,
+        mass: Double,
+        status: CakeStatusEntity,
+        owner: UserEntity,
+        fillings: [FillingEntity],
+        categories: [CategoryEntity],
+        colorsHex: [String],
+        discountKgPrice: Double?,
+        discountEndTime: Date?,
+        dateCreation: Date,
+        model3DURL: String?
+    ) {
+        self.id = id
+        self.name = name
+        self.imageURL = imageURL
+        self.kgPrice = kgPrice
+        self.rating = rating
+        self.reviewsCount = reviewsCount
+        self.description = description
+        self.mass = mass
+        self.status = status
+        self.owner = owner
+        self.fillings = fillings
+        self.categories = categories
+        self.colorsHex = colorsHex
+        self.discountKgPrice = discountKgPrice
+        self.discountEndTime = discountEndTime
+        self.dateCreation = dateCreation
+        self.model3DURL = model3DURL
+    }
 }
 
 // MARK: - Cake_Cake

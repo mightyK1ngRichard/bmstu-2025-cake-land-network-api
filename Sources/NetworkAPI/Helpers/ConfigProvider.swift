@@ -11,7 +11,11 @@ import GRPC
 import NIO
 
 struct ConfigProvider: Sendable {
-    static func makeDefaultCallOptions(modelName: String, systemVersion: String, fingerprint: String) -> CallOptions {
+    static func makeDefaultCallOptions(
+        modelName: String,
+        systemVersion: String,
+        fingerprint: String
+    ) -> CallOptions {
         let device = modelName + " (\(systemVersion))"
         let requestId = UUID().uuidString
 

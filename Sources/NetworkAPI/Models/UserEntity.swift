@@ -21,6 +21,22 @@ public struct UserEntity: Sendable, Hashable {
     public let imageURL: String?
     /// Шапка профиля
     public let headerImageURL: String?
+
+    public init(
+        id: String,
+        fio: String?,
+        nickname: String,
+        mail: String,
+        imageURL: String?,
+        headerImageURL: String?
+    ) {
+        self.id = id
+        self.fio = fio
+        self.nickname = nickname
+        self.mail = mail
+        self.imageURL = imageURL
+        self.headerImageURL = headerImageURL
+    }
 }
 
 // MARK: - Cake_User
